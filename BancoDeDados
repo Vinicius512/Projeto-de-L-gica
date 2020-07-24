@@ -62,8 +62,6 @@ VALUES(5, 12345678905, 'Rua E', 'Rua K', '40.00', '2020-05-05');
 
 
 
-
-
 create table clientes(
 Nome varchar(255), cpf varchar(11) PRIMARY KEY, endereço varchar(255)
 );
@@ -91,7 +89,6 @@ VALUES('Maria', 12345678905, 'Rua E');
 
 
 
-
 SELECT cpf_cliente FROM viagens WHERE valor > 50.00
 SELECT * FROM viagens WHERE data_viagem BETWEEN '2020-01-01' AND '2020-04-04'
 SELECT cpf_cliente FROM viagens WHERE valor > 100.00 OR (valor < 80.00 AND valor > 40.00
@@ -99,3 +96,5 @@ SELECT cpf_cliente FROM viagens WHERE valor > 100.00 OR (valor < 80.00 AND valor
 
 
 UPDATE viagens SET valor = 145.00 WHERE Matricula_motorista = 2 AND data_viagem = '2020-02-02'
+UPDATE motorista SET endereco = 'Rua Z' WHERE Matricula = 1 AND Veiculo_Placa = 'POI0989'
+UPDATE clientes SET endereço = 'Rua Z' WHERE cpf = 12345678901 AND Nome = 'Luis'
