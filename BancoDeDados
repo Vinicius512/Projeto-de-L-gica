@@ -94,4 +94,8 @@ VALUES('Maria', 12345678905, 'Rua E');
 
 SELECT cpf_cliente FROM viagens WHERE valor > 50.00
 SELECT * FROM viagens WHERE data_viagem BETWEEN '2020-01-01' AND '2020-04-04'
-SELECT cpf_cliente FROM viagens WHERE valor > 100.00 OR (valor < 80.00 AND valor > 40.00)
+SELECT cpf_cliente FROM viagens WHERE valor > 100.00 OR (valor < 80.00 AND valor > 40.00
+
+
+
+UPDATE viagens SET valor = 145.00 WHERE Matricula_motorista = 2 AND data_viagem = '2020-02-02'
